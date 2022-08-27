@@ -92,7 +92,7 @@ class Point():
 
 p = Point(2, 8)
 print(p.x)
-print(p.y)"""
+print(p.y)
 
 
 class Flight():
@@ -118,7 +118,102 @@ for person in people:
     if flight.add_passenger(person):
         print(f"added {person} to flight successfully.")
     else:
-        print(f"no available seats for {person}")
+        print(f"no available seats for {person}")"""
+
+
+# decorators
+
+"""
+def announce(f):
+    def wrapper():
+        print("about to run the function")
+        f() # hello() gets called here
+        print("done with the function")
+    return wrapper
+
+@announce
+def hello():
+    print("hello world!")
+hello()"""
+
+"""
+people = [
+    {"name": "harry", "house": "gryffindor"},
+    {"name": "cho", "house": "ravenclaw"},
+    {"name": "darco", "house": "slytherin"}
+]
+
+def f(person):
+   # return person["name"]
+    return person["house"]
+
+people.sort(key=lambda person: person["name"])
+
+print(people)
+"""
+import sys
+try:
+
+    x = int(input("x: "))
+    y = int(input("y: "))
+except ValueError:
+    print("error: invalid input.")
+    sys.exit(1)
+try:
+    result = x/y
+except ZeroDivisionError:
+    print("error: cannot divide by 0.")
+    sys.exit(1)
+
+print(f"{x}/{y} = {result}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
